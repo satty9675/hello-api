@@ -1,3 +1,4 @@
+import socket
 from flask import Flask
 app = Flask(__name__)
 
@@ -8,4 +9,4 @@ def ping():
 
 @app.route("/hello")
 def hello_world():
-  return "Hi from apivm01-us.east"
+  return "Hi from "+socket.gethostname()
